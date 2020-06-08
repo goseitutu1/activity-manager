@@ -1,0 +1,5 @@
+This application managers the activities of working group
+After import, try to install composer and run "composer install" to install dependencies.
+Inside the resource directory, there is a view which contains pages directory and inside are the pages of the app.
+
+There are Activity and SMS_log controllers  that inplement http resource, both controllers are in the "app/http/controllers" directory.
