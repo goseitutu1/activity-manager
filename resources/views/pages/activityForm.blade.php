@@ -49,8 +49,8 @@
             <br>
             <button type="submit" class="btn bg-secondary">
                 <i class="fa fa-floppy-o" aria-hidden="true"></i>
-
-                Save</button>
+                Save
+            </button>
         </form>
     </div>
 </div>
