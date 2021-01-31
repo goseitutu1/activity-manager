@@ -57,11 +57,7 @@ Route::get('/activityGrid/{id}/edit', 'ActivitiesController@edit');
 Route::put('/{id}', 'ActivitiesController@update');
 Route::delete('activityGrid/{id}', 'ActivitiesController@destroy');
 Route::post('activityGrid/query', 'ActivitiesController@showQuery');
-
-
-
-
-
+Route::post('/date', 'ActivitiesController@queryDate');
 
 
 Auth::routes();
