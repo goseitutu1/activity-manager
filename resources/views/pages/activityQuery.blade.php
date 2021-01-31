@@ -18,7 +18,7 @@
             </div>
 
             <div class="card-body">
-                @if(count($sms_logs) > 0)
+                @if(count($data) > 0)
 
                 <table class="table table-striped">
                     <thead>
@@ -33,7 +33,7 @@
                             <th>Updated_At_date_time</th>
                         </tr>
                     </thead>
-                    @foreach ($sms_logs as $item)
+                    @foreach ($data as $item)
                     <tbody>
                         <tr>
                         <td><a href="/activity/{{$item->id}}">{{$item->user_id}}</a></td>
