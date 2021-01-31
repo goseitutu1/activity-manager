@@ -140,11 +140,24 @@ class ActivitiesController extends Controller
         $user_id = $request->input('user_id');
         $activity_title = $request->input('activity_title');
 
-        $sms_logs = DB::table('activities')
+        $data = DB::table('activities')
                     ->where('user_id',$user_id )
                     ->orWhere('activity_title', $activity_title)
                     ->get();
 
-        return view('pages.activityQuery')->with('sms_logs',$sms_logs);
+        return view('pages.activityQuery')->with('data',$data);
     }
+
+    public function queryDate(Request $request){
+        $date_data = array(
+            'start_date' => $request->get('start_date'),
+            'end_date' => $request->get('end_date')
+        );
+        $activities = Activity::whereBetween('created_at', [$date_data['start_date'], $date_data['end_date']])->get();
+
+        return view('pages.activityGrid')->with('activities', $activities);
+        // return($data);
+        // return redirect('/activityGrid');
+    }
+
 }
