@@ -156,8 +156,6 @@ class ActivitiesController extends Controller
         $activities = Activity::whereBetween('created_at', [$date_data['start_date'], $date_data['end_date']])->get();
 
         return view('pages.activityGrid')->with('activities', $activities);
-        // return($data);
-        // return redirect('/activityGrid');
     }
 
 }
